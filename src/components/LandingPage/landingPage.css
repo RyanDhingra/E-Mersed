@@ -1,0 +1,239 @@
+.landingPage {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+}
+
+.pulseEdge1 {
+    stroke-dasharray: 30, 100%;
+    animation: pulse 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    stroke: #62CAEE;
+    stroke-width: 3;
+    fill: none;
+    filter: drop-shadow(0px 0px 5px #62CAEE)
+        drop-shadow(0px 0px 3px #62CAEE)
+        drop-shadow(0px 0px 10px #62CAEE)
+        drop-shadow(0px 0px 30px #62CAEE)
+        drop-shadow(0px 0px 50px #62CAEE);
+}
+
+.pulseEdge2 {
+    stroke-dasharray: 30, 100%;
+    animation: pulse 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    stroke: #62CAEE;
+    stroke-width: 3;
+    fill: none;
+    filter: drop-shadow(0px 0px 5px #62CAEE)
+        drop-shadow(0px 0px 3px #62CAEE)
+        drop-shadow(0px 0px 10px #62CAEE)
+        drop-shadow(0px 0px 30px #62CAEE)
+        drop-shadow(0px 0px 50px #62CAEE);
+    animation-delay: 1s;
+}
+
+.pulseEdge3 {
+    stroke-dasharray: 30, 100%;
+    animation: pulse 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    stroke: #62CAEE;
+    stroke-width: 3;
+    fill: none;
+    filter: drop-shadow(0px 0px 5px #62CAEE)
+        drop-shadow(0px 0px 3px #62CAEE)
+        drop-shadow(0px 0px 10px #62CAEE)
+        drop-shadow(0px 0px 30px #62CAEE)
+        drop-shadow(0px 0px 50px #62CAEE);
+    animation-delay: 2s;
+}
+
+.pulseEdge4 {
+    stroke-dasharray: 30, 100%;
+    animation: pulse 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    stroke: #62CAEE;
+    stroke-width: 3;
+    fill: none;
+    filter: drop-shadow(0px 0px 5px #62CAEE)
+        drop-shadow(0px 0px 3px #62CAEE)
+        drop-shadow(0px 0px 10px #62CAEE)
+        drop-shadow(0px 0px 30px #62CAEE)
+        drop-shadow(0px 0px 50px #62CAEE);
+    animation-delay: 3s;
+}
+
+.pulseEdge5 {
+    stroke-dasharray: 30, 100%;
+    animation: pulse 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    stroke: #62CAEE;
+    stroke-width: 3;
+    fill: none;
+    filter: drop-shadow(0px 0px 5px #62CAEE)
+        drop-shadow(0px 0px 3px #62CAEE)
+        drop-shadow(0px 0px 10px #62CAEE)
+        drop-shadow(0px 0px 30px #62CAEE)
+        drop-shadow(0px 0px 50px #62CAEE);
+    animation-delay: 4s;
+}
+
+.edge {
+    stroke: #62CAEE;
+    stroke-width: 3;
+    fill: none; 
+}
+
+@keyframes pulse {
+    to {
+        stroke-dashoffset: -100%;
+    }
+    
+}
+
+@font-face {
+    font-family: "Mars";
+    src: local("Mars"),
+        url("../../assets/Mars.ttf") format("truetype");
+    }
+
+.title {
+    font-family: 'Mars';
+    color: #62CAEE;
+    font-size: 7rem;
+    margin: 0;
+}
+
+.moto {
+    font-family: 'Mars';
+    color: #62CAEE;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.titleCont {
+    text-align: center;
+    border: 5px solid #62CAEE;
+    padding: 20px;
+    border-radius: 20px;
+    filter: drop-shadow(0px 0px 0px #62CAEE)
+        drop-shadow(0px 0px 0px #62CAEE)
+        drop-shadow(0px 0px 0px #62CAEE)
+        drop-shadow(0px 0px 5px #62CAEE)
+        drop-shadow(0px 0px 50px #62CAEE);
+}
+
+.shop-btn {
+    margin-top: 4em;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #62CAEE;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 3rem;
+    overflow: hidden;
+    transition: 0.2s;
+    font-family: "Mars";
+}
+
+
+
+.shop-btn:hover {
+    color: #020A29;
+    background: #62CAEE;
+    box-shadow: 0 0 10px #62CAEE, 0 0 40px #62CAEE, 0 0 80px #62CAEE;
+    transition-delay: 1s;
+}
+
+
+.shop-btn span {
+    position: absolute;
+    display: block;
+}
+
+
+
+
+.shop-btn span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #62CAEE);
+}
+
+
+
+.shop-btn:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+
+
+.shop-btn span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #62CAEE);
+}
+
+.shop-btn:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+
+
+.shop-btn span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #62CAEE);
+}
+
+.shop-btn:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+
+
+.shop-btn span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #62CAEE);
+}
+
+.shop-btn:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+.ls {
+    width: 45%;
+    height: 100%;
+}
+
+.rs {
+    flex-direction: column;
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
