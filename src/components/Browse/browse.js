@@ -4,7 +4,7 @@ import Headphones from "../../assets/headphones.webm"
 import Keyboard from "../../assets/keyboard.webm"
 import Mic from "../../assets/mic.webm"
 import Cam from "../../assets/cam.webm"
-import VerticalCarousel from "./VerticalCarousel";
+import VerticalCarousel from "./verticalCarousel";
 import { config } from "react-spring";
 import { useState } from 'react';
 
@@ -37,7 +37,8 @@ let slides = [
   ];
 
 export default function Browse() {
-    const [option, setOption] = useState({curr: 1})
+    const [option, setOption] = useState({curr: 1});
+    const [category, setCategory] = useState(null);
 
     const handleCallback = (childData) => {
         if (option.curr !== childData) {
@@ -71,7 +72,7 @@ export default function Browse() {
                     showNavigation={option.showNavigation}
                     animationConfig={config.gentle}
                     parentCallback={handleCallback}
-                    />
+                  />
             </div>
         </div>
     );
