@@ -1,17 +1,22 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
-import GltfModel from "./gltfmodel.js";
 import { OrbitControls } from "@react-three/drei";
-import DraggableDodecahedron from "./test.js";
+import Table from "./table.js";
+import * as THREE from "three";
+import { PerspectiveCamera } from "@react-three/drei";
+import MouseModel from "./mouse.js";
 
-const ModelViewer = ({ modelPath, scale = 40 }) => {
+const ModelViewer = ({ enableControls }) => {
   return (
     <Canvas>
       <ambientLight intensity={2} />
       <spotLight intensity={2} position={[0, 10, 0]} angle={1} penumbra={1} />
       <pointLight intensity={1} position={[0, -10, 0]} />
-      <DraggableDodecahedron />
-      <OrbitControls/>
+      <Table />
+      <primitive object={new THREE.AxesHelper(10)} />
+      <MouseModel />
+      <PerspectiveCamera makeDefault position={[0, 2, 3]} fov={50} />
+      <OrbitControls enabled={enableControls}/>
     </Canvas>
   );
 };
