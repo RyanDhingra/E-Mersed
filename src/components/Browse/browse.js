@@ -38,11 +38,10 @@ let slides = [
 
 export default function Browse() {
     const [option, setOption] = useState({curr: 1});
-    const [category, setCategory] = useState(null);
 
-    const handleCallback = (childData) => {
-        if (option.curr !== childData) {
-            setOption({curr: childData});
+    const handleCallback = (currOption) => {
+        if (option.curr !== currOption) {
+            setOption({curr: currOption});
         }
     }
 

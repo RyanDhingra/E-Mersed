@@ -49,7 +49,7 @@ class VerticalCarousel extends React.Component {
     goToSlide: PropTypes.number,
     showNavigation: PropTypes.bool,
     offsetRadius: PropTypes.number,
-    animationConfig: PropTypes.object
+    animationConfig: PropTypes.object,
   };
 
   static defaultProps = {

@@ -2,6 +2,8 @@ import Landing from "./components/LandingPage/landingPage";
 import Browse from "./components/Browse/browse";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Menu from "./components/Menu/menu";
+import Keyboards from "./components/Browse/Categories/keyboards";
+import VSD from "./components/VSD/vsd";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
         <Route exact path="/" element={<Landing/>}/>
         <Route exact path="/menu" element={<Menu/>}/>
         <Route exact path="/browse" element={<Browse/>}/>
+        <Route exact path="/browse/keyboards" element={<Keyboards/>}/>
+        <Route exact path="/vsd" element={<VSD/>}/>
       </Routes>
     </Router>
   )
