@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
 import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import table from "../../assets/gaming_table.glb"
+import vsdTable from "../../assets/vsd_table.glb"
 
 function Table() {
     const ref = useRef();
-    const gltf = useLoader(GLTFLoader, table);
+    const gltf = useLoader(GLTFLoader, vsdTable);
 
     return (
         <primitive

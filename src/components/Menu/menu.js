@@ -1,14 +1,17 @@
 import React from 'react';
 import "./menu.css"
+import { useNavigate } from 'react-router-dom';
 
 function Menu() {
+    const navigate = useNavigate();
+
     return (
         <div className='menuPage'>
             <ol className='optns'>
-                <li className='item1'><a className='itm-txt' href='browse'>Browse</a></li>
-                <li className='item2'><a className='itm-txt' href='deals'>Deals</a></li>
-                <li className='item3'><a className='itm-txt' href='vsd'>Explore VSD</a></li>
-                <li className='item4'><a className='itm-txt' href='cart'>Cart</a></li>
+                <li className='item1' onClick={() => navigate('/browse')}><p className='itm-txt'>Browse</p></li>
+                <li className='item2' onClick={() => navigate('/deals')}><p className='itm-txt'>Deals</p></li>
+                <li className='item3' onClick={() => navigate('/vsd')}><p className='itm-txt'>Explore VSD</p></li>
+                <li className='item4' onClick={() => navigate('/cart')}><p className='itm-txt'>Cart</p></li>
             </ol>
         </div>
     );

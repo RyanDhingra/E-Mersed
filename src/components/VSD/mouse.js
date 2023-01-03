@@ -1,35 +1,23 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { useThree, useFrame } from '@react-three/fiber';
-import { useDrag } from 'react-use-gesture';
+import React, { useRef, useState } from 'react';
 import { useLoader } from '@react-three/fiber';
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import mouse from "../../assets/vsd_mouse.glb"
 
 
-function MouseModel() {
+function MouseModel({ isSelected }) {
   const ref = useRef();
-  const gltf = useLoader(GLTFLoader, "emersedMouse.glb");
-  const [position, setPosition] = useState([-2.5, 0.489, -1.5]);
-  const { size, viewport } = useThree();
-  const aspect = size.width / viewport.width;
-
-  useFrame(() => {
-    
-  });
-  const bind = useDrag(
-    ({ offset: [x, y, z] }) => {
-      setPosition([(x + position[0]) / aspect, (-y + position[1]) / aspect, (z + position[2])]);
-    },
-    { pointerEvents: true }
-  );
+  const gltf = useLoader(GLTFLoader, mouse);
+  const [position, setPosition] = useState([0, 0.475, 0]);
+  const [rotation, setRotation] = useState([0, 0, 0]);
 
   return (
         <primitive 
         position={position}
-        {...bind()}
         ref={ref}
         object={gltf.scene}
-        rotation={[0, Math.PI/-2,0]}
-        scale={[0.5, 0.5, 0.5]}
+        rotation={rotation}
+        scale={[0.4, 0.4, 0.4]}
+        onClick={(e) => isSelected({name: "Mouse", pos: position, rot: rotation, updatePos: setPosition, updateRot: setRotation})}
         />
   );
 }
