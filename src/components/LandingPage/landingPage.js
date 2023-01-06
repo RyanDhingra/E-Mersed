@@ -1,6 +1,5 @@
 import React from 'react';
 import './landingPage.css';
-import '../../assets/Mars.ttf';
 
 function Landing() {
     return (

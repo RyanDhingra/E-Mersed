@@ -101,7 +101,7 @@
     font-family: "Mars";
     src: local("Mars"),
         url("../../assets/Mars.ttf") format("truetype");
-    }
+}
 
 .title {
     font-family: 'Mars';

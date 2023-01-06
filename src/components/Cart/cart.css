@@ -1,0 +1,84 @@
+.cartPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Mars';
+    color: #62CAEE;
+}
+
+.summary-cont {
+    display: flex;
+    width: 80%;
+    height: 80%;    
+    flex-direction: column;
+    border: 5px solid #62CAEE;
+    border-radius: 25px;
+    filter: drop-shadow(0px 0px 0px #62CAEE)
+        drop-shadow(0px 0px 0px #62CAEE)
+        drop-shadow(0px 0px 0px #62CAEE)
+        drop-shadow(0px 0px 1px #62CAEE)
+        drop-shadow(0px 0px 90px #62CAEE);
+}
+
+.tools-panel {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    border-bottom: 5px solid #62CAEE;
+}
+
+.order {
+    display: flex;
+    height: 90%;
+    width: 100%;
+}
+
+.ls {
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;    text-align: center;
+}
+
+@font-face {
+    font-family: "Pirulen";
+    src: local("Pirulen"),
+        url("../../assets/Pirulen.otf ") format("truetype");
+}
+
+.prices {
+    display: flex;
+    flex-direction: column;    
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    font-family: 'Pirulen';
+}
+
+.rs {
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+}
+
+.proceed {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+}

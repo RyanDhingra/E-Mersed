@@ -7,7 +7,7 @@ import keyboard from "../../assets/vsd_keyboard.glb"
 function KeyboardModel({ isSelected }) {
   const ref = useRef();
   const gltf = useLoader(GLTFLoader, keyboard);
-  const [position, setPosition] = useState([0, 0.458, 0]);
+  const [position, setPosition] = useState([0, 0.458, 0.75]);
   const [rotation, setRotation] = useState([0, 0, 0]);
 
   return (
