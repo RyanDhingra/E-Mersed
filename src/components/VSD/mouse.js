@@ -7,7 +7,7 @@ import mouse from "../../assets/vsd_mouse.glb"
 function MouseModel({ isSelected }) {
   const ref = useRef();
   const gltf = useLoader(GLTFLoader, mouse);
-  const [position, setPosition] = useState([1.1, 0.475, 0.75]);
+  const [position, setPosition] = useState([0.5, 0.475, 0.75]);
   const [rotation, setRotation] = useState([0, Math.PI/-2, 0]);
 
   return (

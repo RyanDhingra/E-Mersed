@@ -5,11 +5,14 @@ import toolbarIcon from "../../assets/toolbar_icon.png"
 import camlockIcon from "../../assets/camlock_icon.png"
 import saveIcon from "../../assets/save_icon.png"
 import helpIcon from "../../assets/help_icon.png"
+import keys from "../../assets/arrowKeys.png"
+import r from "../../assets/rKey.png"
+import updownKeys from "../../assets/shiftctrlKeys.png"
 
 function VSD() {
     const [lock, setLock] = useState(true);
     const [currObj, setCurrObj] = useState({});
-    const [toolbar, setToolbar] = useState(null);
+    const [toolbar, setToolbar] = useState(true);
     const [help, setHelp] = useState(0);
 
     const handleObjectClick = (newObj) => {
@@ -59,10 +62,11 @@ function VSD() {
     }
 
     const handleHelp = () => {
-        if (help < 1) {
+        if (help < 2) {
             setHelp(help + 1);
             setLock(false);
-        } else if (help === 1) {
+            setToolbar(false)
+        } else if (help === 2) {
             setHelp(0);
             setLock(true);
         }
@@ -98,7 +102,7 @@ function VSD() {
             <div>
                 <div className='toolbar-cont' style={{width: '100%', height: '60px', top: '0px', left: '0px', position: 'absolute'}}>
                     <div className='tools-cont' style={{position: 'absolute', zIndex: 10, height: '70px', width: '70px', backgroundColor: '#62CAEE', borderRadius: '0px 50px 50px 0px'}}>
-                        <img style={{zIndex: 10}} title={toolbar ? "Close Toolbar":"Open Toolbar"} className={toolbar === null ? "toolbar-load": toolbar ? "toolbar-active":"toolbar"} onClick={handleToolbar} src={toolbarIcon} alt='Open Toolbar'/>
+                        <img style={{zIndex: 10}} title={toolbar ? "Close Toolbar":"Open Toolbar"} className={toolbar ? "toolbar-active":"toolbar"} onClick={handleToolbar} src={toolbarIcon} alt='Open Toolbar'/>
                     </div>
                     <div style={{position: 'absolute', zIndex: 5, padding: '10px', alignItems: 'center'}} className={toolbar === null ? "tools-load": toolbar ? "tools-active":"tools"}>
                         <img onClick={help === 0 ? handleLock:null} title={!lock ? "Unlock Camera":"Lock Camera"} className='camlock-tool' src={camlockIcon} alt='Lock Camera'/>
@@ -113,12 +117,12 @@ function VSD() {
                 <Scene setSelected={handleObjectClick} enableControls={lock}/> 
                 </div>
             </div>
-            <div className={help === 0 ? 'invisible':'help-cont'}>
+            <div className={help === 1 ? 'help-cont1':'invisible'}>
                 <svg style={{width: '100%', height: '100vh'}}>
                     <clipPath id='highlight-path'>
                         <path d={'M 110 0 Q 110 110 0 110 L 0 '  + height + ' L ' + width + ' '  + height + ' L ' + width + ' 0'}/>
                     </clipPath>
-                    <polygon className='help-arrow'points='175 175 300 250 240 240 250 300' fill='#62CAEE' >
+                    <polygon className='help-arrow' points='175 175 300 250 240 240 250 300' fill='#62CAEE' >
                     <animateTransform
                             attributeName="transform"
                             attributeType="XML"
@@ -128,9 +132,26 @@ function VSD() {
                             dur="1s"
                             repeatCount="indefinite" />
                     </polygon>
-                    <polygon className='next-arrow' points={(width - 50) + ' ' + (height - 25) + ' ' + (width - 25) + ' ' + (height - 75) + ' ' + (width - 50) + ' ' + (height - 125)}fill='#62CAEE' />
+                    <polygon onClick={handleHelp} className='next-arrow' points={(width - 115) + ' ' + (height - 40) + ' ' + (width - 40) + ' ' + (height - 90) + ' ' + (width - 115) + ' ' + (height - 140)} />
                 </svg>
-                <h1 className='next-txt' onClick={handleHelp}>Next</h1>
+                <h1 className='slide1-txt'>Use the tools icon to toggle the tools menu</h1>
+            </div>
+            <div className={help === 2 ? 'help-cont2':'exit-help'}>
+                <div className={help === 2 ? 'slide-comp':'slide-comp-inactive'}>
+                    <img className='key-img' src={keys} alt='Arrow Keys'/>
+                    <h1 className='help-txt'>Use the arrow keys to position the selected object horizontally.</h1>
+                </div>
+                <div className={help === 2 ? 'slide-comp':'slide-comp-inactive'}>
+                    <img className='key-img' src={r} alt='R'/>
+                    <h1 className='help-txt'>Use the 'r' key to rotate the object</h1>
+                </div>
+                <div className={help === 2 ? 'slide-comp':'slide-comp-inactive'}>
+                    <img className='key-img' src={updownKeys} alt='Up/Down'/>
+                    <h1 className='help-txt'>Use the 'shift' and 'control' keys to raise and lower the object</h1>
+                </div>
+                <svg style={{width: '100%', height: '100vh', position: 'absolute', top: 0, left: 0}}>
+                    <polygon onClick={handleHelp} className='next-arrow' points={(width - 115) + ' ' + (height - 40) + ' ' + (width - 40) + ' ' + (height - 90) + ' ' + (width - 115) + ' ' + (height - 140)} />
+                </svg>
             </div>
         </>
     );

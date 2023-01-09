@@ -1,7 +1,13 @@
-import React from 'react';
+import { useState } from 'react';
 import "./cart.css";
 
 function Cart() {
+    const [dcode, setDcode] = useState("");
+
+    const handleDcodeChange = event => {
+        setDcode(event.target.value)
+    }
+
     return (
         <div className='cartPage'>
             <div className='summary-cont'>
@@ -33,14 +39,26 @@ function Cart() {
                     </div>
                     <div className='rs'>
                         <div className='summary'>
-                            <h1>Total: $16.99</h1>
-                            <h1>HST: $16.99</h1>
+                            <div style={{display: 'flex'}}>
+                                <h1>Total:</h1> 
+                                <h1 style={{fontFamily: 'Pirulen'}}>$16.99</h1>
+                            </div>
+                            <div style={{display: 'flex'}}>
+                                <h1>HST:</h1>
+                                <h1 style={{fontFamily: 'Pirulen'}}>$16.99</h1>
+                            </div>
+                            <div>
+                                <h1>Shipping: ?</h1>
+                            </div>
                             <h1>Discount Code:</h1>
-                            <input></input>
+                            <input placeholder='Enter Code' className='dcode' type="text" name="dcode" value={dcode} onChange={handleDcodeChange}/>
                         </div>
                         <div className='proceed'>
-                            <h1>Total: $200.99</h1>
-                            <button>Proceed to Checkout</button>
+                            <div style={{display: 'flex'}}>
+                                <h1>Total:</h1>
+                                <h1 style={{fontFamily: 'Pirulen'}}>$200.99</h1>
+                            </div>
+                            <button className='proceed-btn'>Proceed to Checkout</button>
                         </div>
                     </div>
                 </div>

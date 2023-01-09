@@ -1,0 +1,84 @@
+:root {
+    --text-color-light: #62CAEE;
+    --biggest-font-size: 2rem;
+    --box-shadow-inset: inset 0 22px 56px -36px rgba(98, 202, 238, .5), inset 0 4px 5px -4px rgba(98, 202, 238, 1), inset 0 -31px 34px -32px rgba(96, 68, 144, .3), inset 0 39px 50px -34px rgba(202, 172, 255, .3), inset 0 2px 9px rgba(154, 146, 210, .3), inset 0 1px 10px rgba(227, 222, 255, .2);
+    --drop-shadow: 0 0 8px rgba(98, 202, 238, .8);
+    --text-shadow: 0 0 8px rgba(98, 202, 238, .8);
+    --box-shadow-inset-button: inset 0 2px 7px -9px rgba(98, 202, 238, .5), inset 0 1px 2px -1px rgba(98, 202, 238, 1), inset 0 -20px 16px -32px rgba(96, 68, 144, .3), inset 0 28px 25px -24px rgba(202, 172, 255, .3), inset 0 1px 4px rgba(154, 146, 210, .3), inset 0 1px 10px rgba(227, 222, 255, .2);
+    --box-shadow-inset-hover: inset 0 19px 28px -18px rgba(98, 202, 238, .5), inset 0 4px 6px -3px rgba(98, 202, 238, 1), inset 0 -51px 44px -42px rgba(96, 68, 144, .3), inset 0 59px 60px -32px rgba(202, 172, 255, .3), inset 0 4px 16px rgba(154, 146, 210, .3), inset 0 2px 25px rgba(227, 222, 255, .23);
+    --drop-shadow-hover: 0 0 14px rgba(98, 202, 238, .8);
+    --text-shadow-hover: 0 0 14px rgba(98, 202, 238, .8);
+    --box-shadow-inset-button-hover: inset 0 4px 7px -4px rgba(98, 202, 238, .5), inset 0 1px 2px -1px rgba(98, 202, 238, 1), inset 0 -20px 16px -32px rgba(96, 68, 144, .3), inset 0 28px 25px -20px rgba(202, 172, 255, .3), inset 0 1px 4px rgba(154, 146, 210, .3), inset 0 1px 16px rgba(227, 222, 255, .2);
+    --filter-blur: blur(100px);
+}
+
+.neon,
+.neon__container {
+    display: grid;
+    align-items: center;
+}
+
+.neon {
+    padding: 2.5rem 0;
+}
+
+.neon__container {
+    grid-template-columns: repeat(auto-fit, minmax(312px, 1fr));
+    row-gap: 3.5rem;
+    column-gap: 2.5rem;
+}
+
+.neon__card {background: rgba(255, 255, 255, 0.01);
+    color: var(--text-color-light);
+    box-shadow: var(--box-shadow-inset);
+    backdrop-filter: var(--filter-blur);
+    padding: 3.5rem 1.5rem 2rem;
+    border-radius: 3rem;
+    text-align: center;
+    font-family: 'Mars';
+}
+
+.neon__title,
+.neon__description {
+    text-shadow: var(--text-shadow);
+}
+
+.neon__title {
+    font-size: var(--biggest-font-size);
+    margin-bottom: .25rem;
+}
+
+.neon__description {
+    text-align: initial;
+    margin-bottom: 1.5rem;
+}
+
+.neon__button {
+    box-shadow: var(--box-shadow-inset-button);
+    color: var(--text-color-light);
+    text-shadow: var(--text-shadow);
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem;
+    border-radius: 1rem;
+}
+
+.neon__button:hover {
+    box-shadow: var(--box-shadow-inset-button-hover);
+}
+
+.neon__card:hover {
+    box-shadow: var(--box-shadow-inset-hover);
+}
+
+.neon__card:hover .neon__title,
+.neon__card:hover .neon__description {
+    text-shadow: var(--text-shadow-hover);
+}
+
+.neon__card,
+.neon__title,
+.neon__description,
+.neon__button {
+    transition: .3s;
+}

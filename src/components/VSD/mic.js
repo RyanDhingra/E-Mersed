@@ -7,7 +7,7 @@ import mic from "../../assets/vsd_mic.glb"
 function MicModel({ isSelected }) {
   const ref = useRef();
   const gltf = useLoader(GLTFLoader, mic);
-  const [position, setPosition] = useState([-1.2, 0.41, 0.7]);
+  const [position, setPosition] = useState([-1.45, 0.41, 0.7]);
   const [rotation, setRotation] = useState([0, (3 * Math.PI)/4, 0]);
 
   return (

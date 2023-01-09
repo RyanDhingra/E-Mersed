@@ -2,13 +2,14 @@ import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Table from "./table.js";
-import * as THREE from "three";
 import { PerspectiveCamera } from "@react-three/drei";
 import MouseModel from "./mouse.js";
 import KeyboardModel from "./keyboard.js";
 import MonitorModel from "./monitor.js";
 import MicModel from "./mic.js";
 import HeadphoneModel from "./headphone.js";
+import PCModel from "./pc.js";
+import ChairModel from "./chair.js";
 
 const Scene = ({ setSelected, enableControls }) => {
   return (
@@ -24,7 +25,9 @@ const Scene = ({ setSelected, enableControls }) => {
         <KeyboardModel isSelected={setSelected}/>
         <MicModel isSelected={setSelected}/>
         <HeadphoneModel isSelected={setSelected}/>
-        <PerspectiveCamera makeDefault position={[-1.5, 2.5, 4]} rotation={[0, Math.PI/4, 0]} fov={50} />
+        <PCModel isSelected={setSelected}/>
+        <ChairModel isSelected={setSelected}/>
+        <PerspectiveCamera makeDefault position={[-4.5, 2.3, 4]} rotation={[0, Math.PI/4, 0]} fov={50} />
         <OrbitControls enabled={enableControls}/>
       </group>
     </Canvas>

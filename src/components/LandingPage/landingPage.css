@@ -108,6 +108,7 @@
     color: #62CAEE;
     font-size: 7rem;
     margin: 0;
+user-select: none;
 }
 
 .moto {
@@ -115,6 +116,7 @@
     color: #62CAEE;
     margin: 0;
     font-size: 1.5rem;
+user-select: none;
 }
 
 .titleCont {
@@ -127,6 +129,7 @@
         drop-shadow(0px 0px 0px #62CAEE)
         drop-shadow(0px 0px 5px #62CAEE)
         drop-shadow(0px 0px 50px #62CAEE);
+    user-select: none;
 }
 
 .shop-btn {

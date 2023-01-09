@@ -1,13 +1,13 @@
 import React, { useRef, useState } from 'react';
 import { useLoader } from '@react-three/fiber';
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import monitor from "../../assets/vsd_monitor.glb"
+import pc from "../../assets/vsd_pc.glb"
 
 
-function MonitorModel({ isSelected }) {
+function PCModel({ isSelected }) {
   const ref = useRef();
-  const gltf = useLoader(GLTFLoader, monitor);
-  const [position, setPosition] = useState([-0.5, 1.17, 0]);
+  const gltf = useLoader(GLTFLoader, pc);
+  const [position, setPosition] = useState([1.2, 1.09, 0.3]);
   const [rotation, setRotation] = useState([0, 0, 0]);
 
   return (
@@ -16,10 +16,10 @@ function MonitorModel({ isSelected }) {
         ref={ref}
         object={gltf.scene}
         rotation={rotation}
-        scale={[0.2, 0.2, 0.2]}
-        onClick={(e) => isSelected({name: "Monitor", pos: position, rot: rotation, updatePos: setPosition, updateRot: setRotation})}
+        scale={[2, 2, 2]}
+        onClick={(e) => isSelected({name: "PC", pos: position, rot: rotation, updatePos: setPosition, updateRot: setRotation})}
         />
   );
 }
 
-export default MonitorModel;
+export default PCModel;

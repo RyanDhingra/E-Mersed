@@ -7,7 +7,7 @@ import headphone from "../../assets/vsd_headphone.glb"
 function HeadphoneModel({ isSelected }) {
   const ref = useRef();
   const gltf = useLoader(GLTFLoader, headphone);
-  const [position, setPosition] = useState([0.8, 1.345, 0]);
+  const [position, setPosition] = useState([0.3, 1.345, 0]);
   const [rotation, setRotation] = useState([0, Math.PI/2, 0]);
 
   return (

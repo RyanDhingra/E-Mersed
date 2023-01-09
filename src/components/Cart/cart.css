@@ -15,11 +15,6 @@
     flex-direction: column;
     border: 5px solid #62CAEE;
     border-radius: 25px;
-    filter: drop-shadow(0px 0px 0px #62CAEE)
-        drop-shadow(0px 0px 0px #62CAEE)
-        drop-shadow(0px 0px 0px #62CAEE)
-        drop-shadow(0px 0px 1px #62CAEE)
-        drop-shadow(0px 0px 90px #62CAEE);
 }
 
 .tools-panel {
@@ -81,4 +76,44 @@
     flex-direction: column;
     height: 50%;
     width: 100%;
+    top: 20%;
+    position: relative;
+}
+
+.dcode {
+    width: 90%;
+    height: 30px;
+    font-size: 20px;
+    color: #62CAEE;
+    border-radius: 20px;
+    border: 5px solid #62CAEE;
+    outline: none;
+    padding: 10px;
+    font-family: 'Mars';
+    background-color: #020A29;
+}
+
+.dcode::placeholder {
+    color: #62CAEE;
+}
+
+.proceed-btn {
+    color: #62CAEE;
+    border: 5px solid #62CAEE;
+    padding: 10px;
+    background-color: #020A29;
+    width: 90%;
+    font-size: 20px;
+    border-radius: 20px;
+    font-family: 'Mars';
+}
+
+.proceed-btn:hover {
+    background-color: #62CAEE;
+    color: #020A29;
+    filter: drop-shadow(0px 0px 0px #62CAEE)
+    drop-shadow(0px 0px 0px #62CAEE)
+    drop-shadow(0px 0px 0px #62CAEE)
+    drop-shadow(0px 0px 5px #62CAEE)
+    drop-shadow(0px 0px 20px #62CAEE);
 }
