@@ -23,12 +23,17 @@
 }
 
 .neon__container {
-    grid-template-columns: repeat(auto-fit, minmax(312px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     row-gap: 3.5rem;
     column-gap: 2.5rem;
+    position: relative;
+    left: 10%;
+    width: 80%;
+    top: 50px;
 }
 
-.neon__card {background: rgba(255, 255, 255, 0.01);
+.neon__card {
+    background: rgba(255, 255, 255, 0.01);
     color: var(--text-color-light);
     box-shadow: var(--box-shadow-inset);
     backdrop-filter: var(--filter-blur);
