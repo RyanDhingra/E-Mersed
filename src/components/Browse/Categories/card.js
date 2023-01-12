@@ -5,7 +5,6 @@ function Card({ prods }) {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        console.log(prods[0])
         setItems(prods)
     }, [prods])
 

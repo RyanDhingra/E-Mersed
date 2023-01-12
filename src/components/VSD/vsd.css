@@ -2,8 +2,9 @@
     user-select: none;
 }
 
+html,
 body {
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 .toolbar {

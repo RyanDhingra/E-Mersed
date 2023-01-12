@@ -1,14 +1,32 @@
-import React from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import "./keyboards.css";
 import Card from './card';
 
 function Keyboards({ prods }) {
-    const [searchTerm, setSearchTerm] = useState("");
+    const [searchTerm, setSearchTerm] = useState(null);
+    const [searchedProds, setSearchedProds] = useState(prods);
 
     const handleSearchChange = event => {
         setSearchTerm(event.target.value)
     }
+
+    useEffect(() => {
+        setSearchedProds(prods)
+    }, [prods])
+
+    useEffect(() => {
+        let searchedItems = [];
+
+        prods.forEach(product => {
+            let currName = product.name.toLowerCase();
+            
+            if (currName.includes(searchTerm)) {
+                searchedItems.push(product)
+            }   
+        });
+
+        setSearchedProds(searchedItems)
+    }, [searchTerm])
 
     return (
         <div className="keyboard-page">
@@ -19,7 +37,7 @@ function Keyboards({ prods }) {
                     <path className='searchLine' d="M 17 23 L 25 40" />
                 </svg>
             </div>
-            <Card prods={prods}/>
+            <Card prods={searchedProds}/>
         </div>
     );
 }

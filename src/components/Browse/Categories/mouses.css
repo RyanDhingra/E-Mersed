@@ -40,3 +40,9 @@
     position: relative;
     top: 20px;
 }
+
+body {
+    overflow-y: visible !important;
+    min-height: 100vh;
+    background: radial-gradient(#020A29 30%, #000);
+}
