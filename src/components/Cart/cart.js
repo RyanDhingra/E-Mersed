@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import "./cart.css";
 
-function Cart() {
+function Cart({ cart }) {
     const [dcode, setDcode] = useState("");
 
     const handleDcodeChange = event => {
@@ -15,7 +15,7 @@ function Cart() {
 
                 </div>
                 <div className='order'>
-                    <div className='ls'>
+                    <div className='cart-ls'>
                         <div className='items'>
                             <h1>Sample</h1>
                             <h1>Sample</h1>
@@ -37,7 +37,7 @@ function Cart() {
                             <h1>$1.99</h1>
                         </div>
                     </div>
-                    <div className='rs'>
+                    <div className='cart-rs'>
                         <div className='summary'>
                             <div style={{display: 'flex'}}>
                                 <h1>Total:</h1> 
@@ -54,11 +54,13 @@ function Cart() {
                             <input placeholder='Enter Code' className='dcode' type="text" name="dcode" value={dcode} onChange={handleDcodeChange}/>
                         </div>
                         <div className='proceed'>
-                            <div style={{display: 'flex'}}>
+                            <div style={{display: 'flex', justifyContent: 'center'}}>
                                 <h1>Total:</h1>
                                 <h1 style={{fontFamily: 'Pirulen'}}>$200.99</h1>
                             </div>
-                            <button className='proceed-btn'>Proceed to Checkout</button>
+                            <div className='btn-cont'>
+                                <button className='proceed-btn'>Proceed to Checkout</button>
+                            </div>
                         </div>
                     </div>
                 </div>

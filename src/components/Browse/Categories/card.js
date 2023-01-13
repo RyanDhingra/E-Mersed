@@ -1,24 +1,29 @@
 import { useEffect, useState } from 'react';
 import "./card.css"
 
-function Card({ prods }) {
+function Card({ prods, addToCart }) {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
         setItems(prods)
     }, [prods])
 
+    const addItem = (prod) => {
+        addToCart(prod);
+        alert("Item added")
+    }
+
     return (
-        <section class="neon bd-container">
-            <div class="neon__container">
+        <section className="neon bd-container">
+            <div className="neon__container">
                 {items.map((prod, index) => (
-                    <div class="neon__card">
+                    <div key={index} className="neon__card">
                         <img style={{width: '200px', height: '100px'}} src={prod.image.url} alt='Keyboard'/>
-                        <h1 class="neon__title">{prod.name}</h1>
-                        <p class="neon__description" dangerouslySetInnerHTML={{__html: prod.description}}></p>
-                        <a style={{textDecoration: 'none'}} href="/browse/keyboards" class="neon__button">
+                        <h1 className="neon__title">{prod.name}</h1>
+                        <p className="neon__description" dangerouslySetInnerHTML={{__html: prod.description}}></p>
+                        <h3 style={{textDecoration: 'none'}} onClick={() => addItem(prod)} className="neon__button">
                             Add to cart
-                        </a>
+                        </h3>
                     </div>
                 ))}
             </div>

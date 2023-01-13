@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import "./keyboards.css";
+import "./headsets.css";
 import Card from './card';
 
-function Keyboards({ prods, addToCart }) {
-    const [searchTerm, setSearchTerm] = useState("");
-    const [searchedProds, setSearchedProds] = useState([]);
+function Headsets({ prods }) {
+    const [searchTerm, setSearchTerm] = useState(null);
+    const [searchedProds, setSearchedProds] = useState(prods);
 
     const handleSearchChange = event => {
         setSearchTerm(event.target.value)
@@ -29,17 +29,17 @@ function Keyboards({ prods, addToCart }) {
     }, [searchTerm])
 
     return (
-        <div className="keyboard-page">
+        <div className="headset-page">
             <div className='search-wrapper' style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                <input placeholder='Search Keyboards' className='searchBar' type="text" name="searchTerm" value={searchTerm} onChange={handleSearchChange}/>
+                <input placeholder='Search Headsets' className='searchBar' type="text" name="searchTerm" value={searchTerm} onChange={handleSearchChange}/>
                 <svg className='searchIcon'>
-                    <circle cx="13" cy="13" r="10" stroke="#62CAEE" strokeWidth="3" fill="transparent" />
+                    <circle cx="13" cy="13" r="10" stroke="#62CAEE" stroke-width="3" fill="transparent" />
                     <path className='searchLine' d="M 17 23 L 25 40" />
                 </svg>
             </div>
-            <Card prods={searchedProds} addToCart={addToCart}/>
+            <Card prods={searchedProds}/>
         </div>
     );
 }
 
-export default Keyboards;
+export default Headsets;

@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Menu from "./components/Menu/menu";
 import Keyboards from "./components/Browse/Categories/keyboards";
 import Mouses from "./components/Browse/Categories/mouses";
+import Cameras from "./components/Browse/Categories/cameras";
+import Headsets from "./components/Browse/Categories/headsets";
+import Mics from "./components/Browse/Categories/mics";
 import VSD from "./components/VSD/vsd";
 import Cart from "./components/Cart/cart";
 import { commerce } from './lib/commerce'
@@ -108,10 +111,13 @@ function App() {
         <Route exact path="/" element={<Landing/>}/>
         <Route exact path="/menu" element={<Menu/>}/>
         <Route exact path="/browse" element={<Browse/>}/>
-        <Route exact path="/browse/keyboards" element={<Keyboards prods={keyboards}/>}/>
+        <Route exact path="/browse/keyboards" element={<Keyboards prods={keyboards} addToCart={handleAddToCart}/>}/>
         <Route exact path="/browse/mouses" element={<Mouses prods={mouses}/>}/>
+        <Route exact path="/browse/cameras" element={<Cameras prods={cams}/>}/>
+        <Route exact path="/browse/microphones" element={<Mics prods={mics}/>}/>
+        <Route exact path="/browse/headsets" element={<Headsets prods={headsets}/>}/>
         <Route exact path="/vsd" element={<VSD/>}/>
-        <Route exact path="/cart" element={<Cart/>}/>
+        <Route exact path="/cart" element={<Cart cart={cart}/>}/>
       </Routes>
     </Router>
   )

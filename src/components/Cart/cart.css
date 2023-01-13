@@ -6,6 +6,7 @@
     height: 100vh;
     font-family: 'Mars';
     color: #62CAEE;
+    font-size: 15px;
 }
 
 .summary-cont {
@@ -30,10 +31,11 @@
     width: 100%;
 }
 
-.ls {
+.cart-ls {
     display: flex;
     width: 50%;
     height: 100%;
+    border-right: 2.5px #62CAEE solid;
 }
 
 .items {
@@ -58,10 +60,12 @@
     font-family: 'Pirulen';
 }
 
-.rs {
+.cart-rs {
     display: flex;
+    flex-direction: column;
     width: 50%;
     height: 100%;
+    border-left: 2.5px #62CAEE solid;
 }
 
 .summary {
@@ -69,6 +73,7 @@
     flex-direction: column;
     height: 50%;
     width: 100%;
+    padding-left: 2.5%;
 }
 
 .proceed {
@@ -95,6 +100,11 @@
 
 .dcode::placeholder {
     color: #62CAEE;
+}
+
+.btn-cont {
+    width: 100%;
+    text-align: center;
 }
 
 .proceed-btn {
