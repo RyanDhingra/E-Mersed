@@ -4,7 +4,7 @@ import Headphones from "../../assets/headphones.webm"
 import Keyboard from "../../assets/keyboard.webm"
 import Mic from "../../assets/mic.webm"
 import Cam from "../../assets/cam.webm"
-import VerticalCarousel from "./verticalCarousel.js";
+import VerticalCarousel from "./carousel.js";
 import { config } from "react-spring";
 import { useState } from 'react';
 
