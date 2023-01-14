@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import Slide from "./slide";
+import Slide from "./slide.js";
 import PropTypes from "prop-types";
 
 const Wrapper = styled.div`
