@@ -7,6 +7,7 @@
     font-family: 'Mars';
     color: #62CAEE;
     font-size: 15px;
+    overflow: hidden;
 }
 
 .summary-cont {
