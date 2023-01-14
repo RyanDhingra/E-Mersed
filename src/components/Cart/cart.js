@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import "./cart.css";
+import { useNavigate } from 'react-router-dom';
 
 function Cart({ cart }) {
     const [dcode, setDcode] = useState("");
+    const navigate = useNavigate();
 
     const handleDcodeChange = event => {
         setDcode(event.target.value)
@@ -59,7 +61,7 @@ function Cart({ cart }) {
                                 <h1 style={{fontFamily: 'Pirulen'}}>$200.99</h1>
                             </div>
                             <div className='btn-cont'>
-                                <button className='proceed-btn'>Proceed to Checkout</button>
+                                <button className='proceed-btn' onClick={() => navigate('/cart/checkout')}>Proceed to Checkout</button>
                             </div>
                         </div>
                     </div>

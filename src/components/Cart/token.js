@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { commerce } from '../../../lib/index.js';
+import { commerce } from '../../lib/commerce.js';
 import Checkout from "./checkout.js";
 
-const Checkout = ({ cart, captureCheckout }) => {
+const Token = ({ cart, captureCheckout }) => {
     const [checkoutToken, setCheckoutToken] = useState(null);
 
     useEffect(() => {
@@ -18,8 +18,8 @@ const Checkout = ({ cart, captureCheckout }) => {
     }, [cart]);
 
     return (
-            <Checkout token={checkoutToken} checkout={captureCheckout} cart={cart}/>
+        <Checkout token={checkoutToken} checkout={captureCheckout} cart={cart}/>
     )
 }
 
-export default Checkout
+export default Token;

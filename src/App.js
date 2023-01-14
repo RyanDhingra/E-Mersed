@@ -9,6 +9,7 @@ import Headsets from "./components/Browse/Categories/headsets";
 import Mics from "./components/Browse/Categories/mics";
 import VSD from "./components/VSD/vsd";
 import Cart from "./components/Cart/cart";
+import Token from "./components/Cart/token";
 import { commerce } from './lib/commerce'
 import { useState, useEffect } from "react";
 
@@ -22,6 +23,10 @@ function App() {
   const [cams, setCams] = useState([]);
   const [headsets, setHeadsets] = useState([]);
   const [mics, setMics] = useState([]);
+
+  useEffect(() => {
+    console.log(order)
+  }, [order])
 
   useEffect(() => {
     fetchProducts();
@@ -118,6 +123,7 @@ function App() {
         <Route exact path="/browse/headsets" element={<Headsets prods={headsets}/>}/>
         <Route exact path="/vsd" element={<VSD/>}/>
         <Route exact path="/cart" element={<Cart cart={cart}/>}/>
+        <Route exact path="/cart/checkout" element={<Token cart={cart} captureCheckout={handleCaptureCheckout}/>}/>
       </Routes>
     </Router>
   )
