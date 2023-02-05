@@ -142,7 +142,7 @@ body {
 }
 
 .sel-text {
-    font-family: 'Mars';
+
 }
 
 .help-cont1 {
@@ -234,7 +234,6 @@ body {
     opacity: 1;
     transition: opacity 1s;
     color: #62CAEE;
-    font-family: 'Mars';
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -250,7 +249,6 @@ body {
         drop-shadow(0px 0px 0px #62CAEE)
         drop-shadow(0px 0px 5px #62CAEE)
         drop-shadow(0px 0px 90px #62CAEE);
-        font-family: 'Mars';
 }
 
 .slide-comp-inactive {
@@ -264,7 +262,6 @@ body {
         drop-shadow(0px 0px 0px #62CAEE)
         drop-shadow(0px 0px 5px #62CAEE)
         drop-shadow(0px 0px 90px #62CAEE);
-        font-family: 'Mars';
 }
 
 .slide1-txt {
@@ -278,5 +275,4 @@ body {
         drop-shadow(0px 0px 0px #62CAEE)
         drop-shadow(0px 0px 5px #62CAEE)
         drop-shadow(0px 0px 90px #62CAEE);
-        font-family: 'Mars';
 }

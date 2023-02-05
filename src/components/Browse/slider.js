@@ -20,7 +20,6 @@ const SlideCard = styled.div`
   width: 100vw;
   height: 30%;
   background: white;
-  font-family: 'Mars';
   display: flex;
   align-items: center;
   justify-content: center;

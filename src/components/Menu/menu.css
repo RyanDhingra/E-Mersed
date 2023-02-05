@@ -45,9 +45,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 4px;
     text-decoration: none;
-    font-size: 1rem;
     overflow: hidden;
-    font-family: "Mars";
     border-radius: 20px;
     animation: transitionIn 2s;
     animation-delay: 0.3s;
@@ -74,9 +72,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 4px;
     text-decoration: none;
-    font-size: 1rem;
     overflow: hidden;
-    font-family: "Mars";
     border-radius: 20px;
     animation: transitionIn 2s;
     animation-delay: 0.6s;
@@ -103,9 +99,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 4px;
     text-decoration: none;
-    font-size: 1rem;
     overflow: hidden;
-    font-family: "Mars";
     border-radius: 20px;
     animation: transitionIn 2s;
     animation-delay: 0.9s;
@@ -132,9 +126,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 4px;
     text-decoration: none;
-    font-size: 1rem;
     overflow: hidden;
-    font-family: "Mars";
     border-radius: 20px;
     animation: transitionIn 2s;
     animation-delay: 1.2s;
@@ -155,6 +147,6 @@ body {
 .itm-txt {
     color: #62CAEE;
     text-decoration: none;
-    font-size: 2.5rem;
+    font-size: 4rem;
     margin: 0px;
 }

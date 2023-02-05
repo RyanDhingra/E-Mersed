@@ -7,3 +7,12 @@ body {
     overflow: hidden;
 }
 
+@font-face {
+    font-family: "Tempest Apache";
+    src: local("Tempest Apache"),
+        url("./assets/Tempest Apache.otf") format("opentype");
+}
+
+* {
+    font-family: "Tempest Apache";
+}

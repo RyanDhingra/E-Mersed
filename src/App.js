@@ -9,7 +9,6 @@ import Headsets from "./components/Browse/Categories/headsets";
 import Mics from "./components/Browse/Categories/mics";
 import VSD from "./components/VSD/vsd";
 import Cart from "./components/Cart/cart";
-import Token from "./components/Cart/token";
 import { commerce } from './lib/commerce'
 import { useState, useEffect } from "react";
 
@@ -65,15 +64,12 @@ function App() {
   const handleCaptureCheckout = async (checkoutTokenId, newOrder) => {
     try {
       const incomingOrder = await commerce.checkout.capture(checkoutTokenId, newOrder);
-
       setOrder(incomingOrder);
       refreshCart();
     } catch (error) {
       setErrorMessage(error.data.error.message)
     }
   }
-
-  //pass order, pass error and pass handlecapturecheckout
 
   const refreshCart = async () => {
     const newCart = await commerce.cart.refresh();
@@ -84,6 +80,8 @@ function App() {
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
     setProducts(data);
+    const subdivs = await commerce.services.localeListSubdivisions('CA');
+    console.log(subdivs)
   }
 
   const fetchCart = async () => {
@@ -93,22 +91,27 @@ function App() {
   const handleAddToCart = async (productId, quantity) => {
     const newCart = await commerce.cart.add(productId, quantity)
     setCart(newCart.cart);
+    console.log(productId + " " + quantity + " was added")
   }
 
-  const handleUpdateCartQty = async (productId, quantity) => {
-    const newCart = await commerce.cart.update(productId, quantity);
+  const handleUpdateCartQty = async (productId, currQuantity) => {
+    console.log(currQuantity)
+    console.log(productId)
+    const newCart = await commerce.cart.update(productId, {quantity: currQuantity});
     setCart(newCart.cart)
+    window.location.reload();
   }
 
   const handleRemoveFromCart = async (productId) => {
     const newCart = await commerce.cart.remove(productId)
     setCart(newCart.cart)
+    window.location.reload();
   }
 
-  const handleEmptyCart = async () => {
+  /*const handleEmptyCart = async () => {
     const newCart = await commerce.cart.empty()
     setCart(newCart.cart)
-  }
+  }*/
 
   return (
     <Router>
@@ -122,8 +125,7 @@ function App() {
         <Route exact path="/browse/microphones" element={<Mics prods={mics}/>}/>
         <Route exact path="/browse/headsets" element={<Headsets prods={headsets}/>}/>
         <Route exact path="/vsd" element={<VSD/>}/>
-        <Route exact path="/cart" element={<Cart cart={cart}/>}/>
-        <Route exact path="/cart/checkout" element={<Token cart={cart} captureCheckout={handleCaptureCheckout}/>}/>
+        <Route exact path="/cart" element={<Cart cart={cart} captureCheckout={handleCaptureCheckout} updateQuantity={handleUpdateCartQty} removeItem={handleRemoveFromCart}/>}/> 
       </Routes>
     </Router>
   )

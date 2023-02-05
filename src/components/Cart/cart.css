@@ -4,7 +4,6 @@
     justify-content: center;
     width: 100%;
     height: 100vh;
-    font-family: 'Mars';
     color: #62CAEE;
     font-size: 15px;
     overflow: hidden;
@@ -17,6 +16,31 @@
     flex-direction: column;
     border: 5px solid #62CAEE;
     border-radius: 25px;
+    overflow: hidden;
+}
+
+.prods {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.prods::-webkit-scrollbar {
+    width: 1vw;
+}
+
+.prods::-webkit-scrollbar-thumb {
+    background-color: #62CAEE;
+    border: 0.3vw solid #020A29;
+    border-radius: 20px;
+}
+
+.prods::-webkit-scrollbar-track {
+    background-color: transparent;
 }
 
 .tools-panel {
@@ -28,7 +52,7 @@
 
 .order {
     display: flex;
-    height: 90%;
+    height: 100%;
     width: 100%;
 }
 
@@ -37,28 +61,24 @@
     width: 50%;
     height: 100%;
     border-right: 2.5px #62CAEE solid;
+    font-size: 20px;
+    flex-direction: column;
 }
 
 .items {
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 50%;    text-align: center;
-}
-
-@font-face {
-    font-family: "Pirulen";
-    src: local("Pirulen"),
-        url("../../assets/Pirulen.otf ") format("truetype");
+    width: 60%;    
+    text-align: center;
 }
 
 .prices {
     display: flex;
     flex-direction: column;    
-    width: 50%;
+    width: 40%;
     height: 100%;
     text-align: center;
-    font-family: 'Pirulen';
 }
 
 .cart-rs {
@@ -95,7 +115,6 @@
     border: 5px solid #62CAEE;
     outline: none;
     padding: 10px;
-    font-family: 'Mars';
     background-color: #020A29;
 }
 
@@ -116,7 +135,6 @@
     width: 90%;
     font-size: 20px;
     border-radius: 20px;
-    font-family: 'Mars';
 }
 
 .proceed-btn:hover {
@@ -126,5 +144,13 @@
     drop-shadow(0px 0px 0px #62CAEE)
     drop-shadow(0px 0px 0px #62CAEE)
     drop-shadow(0px 0px 5px #62CAEE)
+    drop-shadow(0px 0px 20px #62CAEE);
+}
+
+.quantity:hover {
+    filter: drop-shadow(0px 0px 0px #62CAEE)
+    drop-shadow(0px 0px 0px #62CAEE)
+    drop-shadow(0px 0px 1px #62CAEE)
+    drop-shadow(0px 0px 10px #62CAEE)
     drop-shadow(0px 0px 20px #62CAEE);
 }
