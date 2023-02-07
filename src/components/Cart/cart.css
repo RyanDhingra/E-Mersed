@@ -73,12 +73,38 @@
     text-align: center;
 }
 
+.items.empty {
+    visibility: hidden;
+    width: 0%;
+    height: 0%;
+}
+
 .prices {
     display: flex;
     flex-direction: column;    
     width: 40%;
     height: 100%;
     text-align: center;
+}
+
+.prices.empty {
+    visibility: hidden;
+    width: 0%;
+    height: 0%;
+}
+
+.isEmpty {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notEmpty {
+    width: 0%;
+    height: 0%;
+    visibility: hidden;
 }
 
 .cart-rs {

@@ -73,15 +73,20 @@ function Cart({ cart, captureCheckout, updateQuantity, removeItem }) {
 
     return (
         <>
+            <div style={{zIndex: 2, width: '100%', height: '100vh', position: 'absolute', display: 'flex', justifyContent: 'center', alignItems: 'center', visibility: !loaded ? "visible":"hidden"}}>
+                <h1 style={{color: '#62CAEE', fontSize: '5rem'}}>Loading...</h1>
+            </div>
             <div style={{zIndex: 1,backgroundColor: 'black', width: '100%', height: '100vh', opacity: 0.8, position: 'absolute', display: 'flex', justifyContent: 'center', alignItems: 'center', visibility: !loaded ? "visible":"hidden"}}>
-                <h1 style={{zIndex: 2, color: '#62CAEE'}}>Loading...</h1>
             </div>
             <div className='cartPage'>
                 <div className='summary-cont'>
                     <div className='order'>
                         <div className='cart-ls'>
                             <div className='prods'>
-                                <div className='items'>
+                                <div className={items?.length > 0 ? 'notEmpty': 'isEmpty'}>
+                                    <h1 style={{fontSize: '50px'}}>CART IS EMPTY</h1>
+                                </div>
+                                <div className={items?.length > 0 ? 'items':'items empty'}>
                                     {items?.map((prod, index) => (
                                         <div key={index}>
                                             <h1 style={{margin: '0px'}}>{prod.name}</h1>
@@ -99,7 +104,7 @@ function Cart({ cart, captureCheckout, updateQuantity, removeItem }) {
                                         </div>
                                     ))}
                                 </div>
-                                <div className='prices'>
+                                <div className={items?.length > 0 ? 'prices':'prices empty'}>
                                     {items?.map((prod, index) => (
                                         <div key={index}>
                                             <h1 style={{margin: '0px'}}>{prod.price.formatted_with_symbol}</h1>

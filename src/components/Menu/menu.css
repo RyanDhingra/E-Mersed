@@ -117,33 +117,6 @@ body {
     color: #020A29;
 }
 
-.item4 {
-    top: -1000%;
-    position: relative;
-    display: inline-block;
-    padding: 15px 30px;
-    color: #62CAEE;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    text-decoration: none;
-    overflow: hidden;
-    border-radius: 20px;
-    animation: transitionIn 2s;
-    animation-delay: 1.2s;
-    animation-fill-mode: forwards;
-    cursor: pointer;
-}
-
-.item4:hover {
-    color: #020A29;
-    background: #62CAEE;
-    box-shadow: 0 0 10px #62CAEE, 0 0 40px #62CAEE, 0 0 80px #62CAEE;
-}
-
-.item4:hover .itm-txt {
-    color: #020A29;
-}
-
 .itm-txt {
     color: #62CAEE;
     text-decoration: none;
