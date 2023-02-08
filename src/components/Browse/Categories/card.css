@@ -50,11 +50,13 @@
 .neon__title {
     font-size: var(--biggest-font-size);
     margin-bottom: .25rem;
+    font-size: 3rem;
 }
 
 .neon__description {
     text-align: initial;
     margin-bottom: 1.5rem;
+    font-size: 2rem;
 }
 
 .neon__button {
@@ -65,6 +67,7 @@
     justify-content: center;
     padding: 1.25rem;
     border-radius: 1rem;
+    font-size: 30px;
 }
 
 .neon__button:hover {

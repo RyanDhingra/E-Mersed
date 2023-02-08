@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
 import "./mouses.css";
 import Card from './card';
+import cart from "../../../assets/cart.png"
+import { useNavigate } from 'react-router-dom';
 
 function Mouses({ prods }) {
     const [searchTerm, setSearchTerm] = useState("");
     const [searchedProds, setSearchedProds] = useState([]);
+    const navigate = useNavigate();
 
     const handleSearchChange = event => {
         setSearchTerm(event.target.value)
@@ -34,6 +37,9 @@ function Mouses({ prods }) {
                 </svg>
             </div>
             <Card prods={searchedProds}/>
+            <div style={{position: 'fixed', right: '0px', top: '0px', margin: '20px'}}>
+                <img onClick={() => navigate('/cart')} className='cart-btn' src={cart} alt='Cart'/>
+            </div>
         </div>
     );
 }

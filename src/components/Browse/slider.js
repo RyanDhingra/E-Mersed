@@ -89,7 +89,7 @@ function Slide({
           }}
         >
           <SlideCard onClick={() => moveSlide(offsetFromMiddle)}>
-            <a className={activeContent === content ? "category-link-active":"category-link"} href={"browse/" + activeContent.toLowerCase()}><h1 className={activeContent === content ? "category-txt active":"category-txt"}>{content}</h1></a>
+            <a className={activeContent === content ? "category-link-active":"category-link"} href={"browse/" + activeContent.toLowerCase()}><h1  style={{fontSize: '7rem'}} className={activeContent === content ? "category-txt active":"category-txt"}>{content}</h1></a>
           </SlideCard>
         </SlideContainer>
       )}

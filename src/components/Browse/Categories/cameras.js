@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
 import "./cameras.css";
 import Card from './card';
+import cart from "../../../assets/cart.png"
+import { useNavigate } from 'react-router-dom';
 
 function Cameras({ prods }) {
     const [searchTerm, setSearchTerm] = useState(null);
     const [searchedProds, setSearchedProds] = useState(prods);
+    const navigate = useNavigate();
 
     const handleSearchChange = event => {
         setSearchTerm(event.target.value)
@@ -38,6 +41,9 @@ function Cameras({ prods }) {
                 </svg>
             </div>
             <Card prods={searchedProds}/>
+            <div style={{position: 'fixed', right: '0px', top: '0px', margin: '20px'}}>
+                <img onClick={() => navigate('/cart')} className='cart-btn' src={cart} alt='Cart'/>
+            </div>
         </div>
     );
 }

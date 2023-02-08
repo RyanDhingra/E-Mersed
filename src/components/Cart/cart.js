@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react';
 import "./cart.css";
-import { useNavigate } from 'react-router-dom';
 import Token from './token.js';
 
 function Cart({ cart, captureCheckout, updateQuantity, removeItem }) {
     const [dcode, setDcode] = useState("");
-    const navigate = useNavigate();
     const [items, setItems] = useState([]);
     const [region, setRegion] = useState("Select Province/State");
     const [tax, setTax] = useState("...");
