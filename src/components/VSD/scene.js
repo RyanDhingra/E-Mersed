@@ -18,8 +18,8 @@ const Scene = ({ setSelected, enableControls }) => {
         <ambientLight intensity={2} />
         <spotLight intensity={1} position={[0, 50, 0]} angle={1} penumbra={0.1} />
         <pointLight intensity={1} position={[0, -10, 0]} />
-        <Table/>
-
+        <Table />
+        
         <MouseModel isSelected={setSelected}/>
         <MonitorModel isSelected={setSelected}/>
         <KeyboardModel isSelected={setSelected}/>

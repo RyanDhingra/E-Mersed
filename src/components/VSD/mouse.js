@@ -1,12 +1,11 @@
 import React, { useRef, useState } from 'react';
 import { useLoader } from '@react-three/fiber';
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import mouse from "../../assets/vsd_mouse.glb"
 
 
 function MouseModel({ isSelected }) {
   const ref = useRef();
-  const gltf = useLoader(GLTFLoader, mouse);
+  const gltf = useLoader(GLTFLoader, "https://e-mersed--vsd-3d-objects.s3.us-east-2.amazonaws.com/vsd_mouse.glb");
   const [position, setPosition] = useState([0.5, 0.475, 0.75]);
   const [rotation, setRotation] = useState([0, Math.PI/-2, 0]);
 

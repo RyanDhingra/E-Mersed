@@ -1,12 +1,11 @@
 import React, { useRef, useState } from 'react';
 import { useLoader } from '@react-three/fiber';
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import chair from "../../assets/vsd_chair.glb"
 
 
 function ChairModel({ isSelected }) {
   const ref = useRef();
-  const gltf = useLoader(GLTFLoader, chair);
+  const gltf = useLoader(GLTFLoader, "https://e-mersed--vsd-3d-objects.s3.us-east-2.amazonaws.com/vsd_chair.glb");
   const [position, setPosition] = useState([-0.5, -1.13, 2]);
   const [rotation, setRotation] = useState([0, 0, 0]);
 

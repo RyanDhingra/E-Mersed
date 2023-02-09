@@ -1,12 +1,11 @@
 import React, { useRef, useState } from 'react';
 import { useLoader } from '@react-three/fiber';
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import pc from "../../assets/vsd_pc.glb"
 
 
 function PCModel({ isSelected }) {
   const ref = useRef();
-  const gltf = useLoader(GLTFLoader, pc);
+  const gltf = useLoader(GLTFLoader, "https://e-mersed--vsd-3d-objects.s3.us-east-2.amazonaws.com/vsd_pc.glb");
   const [position, setPosition] = useState([1.2, 1.09, 0.3]);
   const [rotation, setRotation] = useState([0, 0, 0]);
 

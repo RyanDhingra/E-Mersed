@@ -1,11 +1,10 @@
 import React, { useRef } from "react";
 import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import vsdTable from "../../assets/vsd_table.glb"
 
 function Table() {
     const ref = useRef();
-    const gltf = useLoader(GLTFLoader, vsdTable);
+    const gltf = useLoader(GLTFLoader, "https://e-mersed--vsd-3d-objects.s3.us-east-2.amazonaws.com/vsd_table.glb");
 
     return (
         <primitive
