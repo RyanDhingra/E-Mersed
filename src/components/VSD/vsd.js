@@ -99,7 +99,7 @@ function VSD() {
  
     return (
         <>
-            <div>
+            <div className='main-cont'>
                 <div className='toolbar-cont' style={{width: '100%', height: '60px', top: '0px', left: '0px', position: 'absolute'}}>
                     <div className='tools-cont' style={{position: 'absolute', zIndex: 10, height: '70px', width: '70px', backgroundColor: '#62CAEE', borderRadius: '0px 50px 50px 0px'}}>
                         <img style={{zIndex: 10}} title={toolbar ? "Close Toolbar":"Open Toolbar"} className={toolbar ? "toolbar-active":"toolbar"} onClick={handleToolbar} src={toolbarIcon} alt='Open Toolbar'/>
@@ -113,8 +113,8 @@ function VSD() {
                 <div className='sel-cont'>
                     <h1 className='sel-text'>{"Selected: " + (currObj.name ? currObj.name: "None")}</h1>
                 </div>
-                <div style={{width: '100%', height: '100vh', zIndex: 1}} tabIndex='0' onKeyDown={(e) => handleKeys(e)}>
-                <Scene setSelected={handleObjectClick} enableControls={lock}/> 
+                <div className='scene-cont' style={{width: '100%', height: '100vh', zIndex: 1}} tabIndex='0' onKeyDown={(e) => handleKeys(e)}>
+                    <Scene setSelected={handleObjectClick} enableControls={lock}/> 
                 </div>
             </div>
             <div className={help === 1 ? 'help-cont1':'invisible'}>

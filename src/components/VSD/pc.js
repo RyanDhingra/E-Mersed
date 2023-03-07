@@ -2,10 +2,9 @@ import React, { useRef, useState } from 'react';
 import { useLoader } from '@react-three/fiber';
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
-
 function PCModel({ isSelected }) {
   const ref = useRef();
-  const gltf = useLoader(GLTFLoader, "https://e-mersed--vsd-3d-objects.s3.us-east-2.amazonaws.com/vsd_pc.glb");
+  const gltf = useLoader(GLTFLoader, 'https://cors-anywhere-db4o.onrender.com/https://drive.google.com/uc?id=1qKH1upgOXRjG86Jysp8GB_57N1Z50yWj');
   const [position, setPosition] = useState([1.2, 1.09, 0.3]);
   const [rotation, setRotation] = useState([0, 0, 0]);
 

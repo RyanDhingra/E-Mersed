@@ -2,10 +2,9 @@ import React, { useRef, useState } from 'react';
 import { useLoader } from '@react-three/fiber';
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
-
 function HeadphoneModel({ isSelected }) {
   const ref = useRef();
-  const gltf = useLoader(GLTFLoader, "https://e-mersed--vsd-3d-objects.s3.us-east-2.amazonaws.com/vsd_headphone.glb");
+  const gltf = useLoader(GLTFLoader, 'https://cors-anywhere-db4o.onrender.com/https://drive.google.com/uc?id=1vR7q4T0bzREvd7tZmecJLfKXlhwgBFWf');
   const [position, setPosition] = useState([0.3, 1.345, 0]);
   const [rotation, setRotation] = useState([0, Math.PI/2, 0]);
 

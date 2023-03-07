@@ -2,10 +2,9 @@ import React, { useRef, useState } from 'react';
 import { useLoader } from '@react-three/fiber';
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
-
 function MicModel({ isSelected }) {
   const ref = useRef();
-  const gltf = useLoader(GLTFLoader, "https://e-mersed--vsd-3d-objects.s3.us-east-2.amazonaws.com/vsd_mic.glb");
+  const gltf = useLoader(GLTFLoader, 'https://cors-anywhere-db4o.onrender.com/https://drive.google.com/uc?id=1vvTzPx9S17brLoOhaGPt1abwq4MFeMVW');
   const [position, setPosition] = useState([-1.45, 0.41, 0.7]);
   const [rotation, setRotation] = useState([0, (3 * Math.PI)/4, 0]);
 
