@@ -4,7 +4,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 function MonitorModel({ isSelected }) {
   const ref = useRef();
-  const gltf = useLoader(GLTFLoader, 'https://cors-anywhere-db4o.onrender.com/https://drive.google.com/uc?id=1jrtSVNkd59X7kSchoOthuu_nlsz_R58O');
+  const gltf = useLoader(GLTFLoader, 'https://cors-anywhere-db4o.onrender.com/https://e-mersed-models.onrender.com/vsd_monitor.glb');
   const [position, setPosition] = useState([-0.5, 1.17, 0]);
   const [rotation, setRotation] = useState([0, 0, 0]);
 

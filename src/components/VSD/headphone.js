@@ -4,7 +4,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 function HeadphoneModel({ isSelected }) {
   const ref = useRef();
-  const gltf = useLoader(GLTFLoader, 'https://cors-anywhere-db4o.onrender.com/https://drive.google.com/uc?id=1vR7q4T0bzREvd7tZmecJLfKXlhwgBFWf');
+  const gltf = useLoader(GLTFLoader, 'https://cors-anywhere-db4o.onrender.com/https://e-mersed-models.onrender.com/vsd_headphones.glb');
   const [position, setPosition] = useState([0.3, 1.345, 0]);
   const [rotation, setRotation] = useState([0, Math.PI/2, 0]);
 

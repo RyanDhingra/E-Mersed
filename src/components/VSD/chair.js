@@ -4,7 +4,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 function ChairModel({ isSelected }) {
   const ref = useRef();
-  const gltf = useLoader(GLTFLoader, 'https://cors-anywhere-db4o.onrender.com/https://drive.google.com/uc?id=1T3zs7kjgb6UDW47_tTbjPcuTCtJSGCob');
+  const gltf = useLoader(GLTFLoader, 'https://cors-anywhere-db4o.onrender.com/https://e-mersed-models.onrender.com/vsd_chair.glb');
   const [position, setPosition] = useState([-0.5, -1.13, 2]);
   const [rotation, setRotation] = useState([0, 0, 0]);
 

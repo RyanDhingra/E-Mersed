@@ -4,7 +4,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 function KeyboardModel({ isSelected }) {
   const ref = useRef();
-  const gltf = useLoader(GLTFLoader, 'https://cors-anywhere-db4o.onrender.com/https://drive.google.com/uc?id=1TZomOsGsHlCVjTv8F_VjzZttw8c7XJyE');
+  const gltf = useLoader(GLTFLoader, 'https://cors-anywhere-db4o.onrender.com/https://e-mersed-models.onrender.com/vsd_keyboard.glb');
   const [position, setPosition] = useState([-0.5, 0.458, 0.75]);
   const [rotation, setRotation] = useState([0, 0, 0]);
 
